@@ -1,0 +1,46 @@
+h1{
+    text-align: center;               
+    font-size: 35px;   
+}
+/*debug letter
+div1{
+    float:left;
+    text-align: center;
+    width:100%;
+    color:green;
+    font-size:20px;
+}
+
+letter {
+    text-align: center;
+    color:red;    
+    font-size: 25px;
+}
+*/
+div2{
+    float:left;
+    width:30%;
+    color:red;
+    font-size: 25px;
+}
+
+
+div3{
+    width:60%;
+    float: right;
+    text-align: right;
+    color:green;
+    font-size: 25px;
+}
+div4{
+    clear:both;
+    width:100%;
+    float:left;
+    text-align: center;
+    font-size:25px;
+    color:blue;
+}
+fails{
+    color: purple;
+    font-size: 20px;
+}
