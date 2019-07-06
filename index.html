@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Game</title>
+    <style>
+        h1{
+            text-align: center;    
+
+        }
+        
+        div1{
+            float:left;
+            text-align: center;
+            width:100%;
+            color:green;
+            font-size:20px;
+        }
+        
+        letter {
+            text-align: center;
+            color:red;    
+            font-size: 25px;
+        }
+        
+        div2{
+            float:left;
+            width:30%
+
+        }
+
+
+        div3{
+            width:60%;
+            float: right;
+            text-align: right;
+        }
+        div4{
+            clear:both;
+            width:100%;
+            float:left;
+            text-align: center;
+            font-size:25px;
+            color:blue;
+        }
+        fails{
+            color: purple;
+            font-size: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>What letter am I thinking of?  Please use lower case.</h1>
+    <!-- debug div, doesnt update letter till after 1st guess enable line debug of js as well
+    <div1>
+        <p0>Letter is</p0>
+        <letter></letter>
+    </div1> -->
+    
+    <br>
+    
+    <div2>
+        <p1>Guesses remaining:</p1>
+        <guess>10</guess>
+
+    </div2>
+    
+    <div3>
+        <p2>Win count:</p2>
+        <wincount>0</wincount>
+        <br>
+        <p3>Loss count:</p3>
+        <losscount>0</losscount>
+        <br>
+    </div3>
+
+    <div4>
+        <p4>Guessed Letters:</p4>
+        <br>
+        <fails></fails>
+    </div4>    
+
+
+    
+    <script type="text/javascript">
+    var guesses = 10;
+    var winCounter = 0;
+    var lossCounter = 0;  
+        
+    var alphaString ="abcdefghijklmnopqrstuvwxyz";    
+    var guessLetter = Math.floor(Math.random()*25);        
+    guessLetter =alphaString[guessLetter];
+    var failString = "";
+    
+    function psychic(){
+        alphaString ="abcdefghijklmnopqrstuvwxyz";    
+        guessLetter = Math.floor(Math.random()*25);        
+        guessLetter =alphaString[guessLetter];           
+        guesses = 10; //error w/ extra guess counting
+        failstring="";
+        //userGuess;    
+    }    
+
+    function userGuess(){             
+        letterTag = document.querySelector("letter");
+       //debug letterTag.innerHTML = guessLetter;
+        var endFlag = false;
+        
+        //guessed letters
+        if( alphaString.includes(event.key)){
+            failString = failString +" "+ event.key;
+            failTag = document.querySelector("fails");
+            failTag.innerHTML = failString;
+            guesses--;
+            guessTag = document.querySelector("guess");
+            guessTag.innerHTML = guesses;
+            
+        }
+        //win condition
+        if (guessLetter.includes(event.key)){
+            alert("The letter was "+ guessLetter + " you win");
+            winCounter++;
+            endFlag = true;
+            winTag = document.querySelector("wincount");
+            winTag.innerHTML = winCounter;
+            guessTag.innerHTML = 10;
+            failTag.innerHTML = "";
+        
+        //lose condition    
+        }else if (guesses == 0){
+            alert("you lose");
+            lossCounter++;
+            lossTag = document.querySelector("losscount");
+            lossTag.innerHTML = lossCounter;    
+            endFlag = true;    
+            guessTag.innerHTML = 10;
+            failTag.innerHTML = "";
+        }    
+
+        //game repeat    
+        if (endFlag == true){
+            failString= "";
+            
+            var playAgain = prompt("Play again? yes or no");
+        
+            if (playAgain == "yes"){            
+            psychic();
+            }
+        }        
+                   
+           
+        
+
+                       
+    
+    }     
+    document.onkeyup = userGuess;
+    
+    
+    </script>
+
+
+
+</body>
+</html>
