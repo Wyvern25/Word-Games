@@ -1,0 +1,74 @@
+h1{
+	text-align: center;               
+	font-size: 35px;
+	color:white;   
+}
+
+a:link, a:visited {
+	color:white;
+}
+
+nav{
+	margin-top: -22px;
+	float:right;
+	color:white;
+	
+}
+/* debug letter */
+div1{
+	margin-top: 74px;
+	float:left;
+	text-align: center;
+	width:100%;
+	color:white;
+	font-size:24px;
+}
+
+p{
+	margin-top:65px;    
+}
+
+letter {
+	text-align: center;
+	color:white;    
+	font-size: 25px;
+}
+
+div2{
+	float:left;
+	width:30%;
+	color:white;
+	font-size: 25px;
+	margin-top: 150px;
+}
+
+
+div3{
+	width:60%;
+	float: right;
+	text-align: right;
+	color:white;
+	font-size: 25px;
+	margin-top: 150px;
+}
+
+div4{
+	margin-top: 69px;
+	clear:both;
+	width:100%;
+	float:left;
+	text-align: center;
+	font-size:25px;
+	color:white;
+}
+
+fails{
+	color: white;
+	font-size: 20px;
+}
+body {
+	background: url("../images/background.jpg") repeat-x;
+	width:98%;
+	background-color: black;
+	
+}

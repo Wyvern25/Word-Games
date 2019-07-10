@@ -54,9 +54,9 @@ function userGuess(){
 
     //game repeat    
     if (endFlag == true){
-        failString= "";
+        failString = "";
             
-        var playAgain = prompt("Play again? yes or no");
+        var playAgain = "yes"; //prompt("Play again? yes or no");
             
         if (playAgain == "yes"){            
         psychic();

@@ -17,6 +17,12 @@ letter {
     font-size: 25px;
 }
 */
+nav{
+    float:right;
+    margin-top: -20px;
+    padding-right: 20px;
+}
+
 div2{
     float:left;
     width:30%;
@@ -31,6 +37,7 @@ div3{
     text-align: right;
     color:green;
     font-size: 25px;
+    padding-right: 20px;
 }
 div4{
     clear:both;

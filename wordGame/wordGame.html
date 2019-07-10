@@ -7,26 +7,34 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-    <title>Word Game</title>    
+    <title>Hockey Game</title>
+    
 </head>
 <body>
-
-    <h1>What letter am I thinking of?  Please use lower case.</h1>
-    <!-- debug div, doesnt update letter till after 1st guess enable line debug of js as well
-    <div1>
-        <p0>Letter is</p0>
-        <letter></letter>
-    </div1> -->
+    
+    <h1>What NHL Team am I thinking of?  Please use lower case.</h1>
+     <!-- debug div, doesnt update letter till after 1st guess enable line debug of js as well -->
     <nav>
-            <a href="index.html">Guess the Letter</a>
-            <a href="wordGame/wordGame.html">Guess the Word</a>
-    </nav>
-
+            <a href="../index.html">Guess the Letter</a>
+            <a href="wordGame.html">Guess the Word</a>
+    </nav>       
+    
+    <div1>
+        <p0>Word is:</p0>
+        <p></p>
+    </div1> 
+    
     <br>
+    
+    <div4>
+            <p4>Guessed Letters:</p4>
+            <br>
+            <fails></fails>
+    </div4>
     
     <div2>
         <p1>Guesses remaining:</p1>
-        <guess>10</guess>
+        <guess>12</guess>
 
     </div2>
     
@@ -39,13 +47,9 @@
         <br>
     </div3>
 
-    <div4>
-        <p4>Guessed Letters:</p4>
-        <br>
-        <fails></fails>
-    </div4>    
-
-    <script src="assets/javascript/game.js"></script>
+     
     
+    
+    <script src="assets/javascript/game.js"></script>
 </body>
 </html>
