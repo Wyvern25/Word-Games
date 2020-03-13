@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>Hockey Game</title>
-    
+
 </head>
+
 <body>
-    
-    <h1>What NHL Team am I thinking of?  Please use lower case.</h1>
-     <!-- debug div, doesnt update letter till after 1st guess enable line debug of js as well -->
-    <nav>
+    <div class='container'>
+        <h2>What NHL Team am I thinking of?</h2>
+        <br>
+        <nav>
             <a href="../index.html">Guess the Letter</a>
             <a href="wordGame.html">Guess the Word</a>
-    </nav>       
-    
-    <div1>
-        <p0>Word is:</p0>
-        <p></p>
-    </div1> 
-    
-    <br>
-    
-    <div4>
+        </nav>
+
+        <div1>
+            <p0>Word is:</p0>
+
+        </div1>
+        <div id='blanks'>
+            <p></p>
+        </div>
+        <br>
+
+        <div4>
             <p4>Guessed Letters:</p4>
             <br>
             <fails></fails>
-    </div4>
-    
-    <div2>
-        <p1>Guesses remaining:</p1>
-        <guess>12</guess>
+        </div4>
 
-    </div2>
-    
-    <div3>
-        <p2>Win count:</p2>
-        <wincount>0</wincount>
-        <br>
-        <p3>Loss count:</p3>
-        <losscount>0</losscount>
-        <br>
-    </div3>
+        <div2>
+            <p1>Guesses remaining:</p1>
+            <guess>12</guess>
 
-     
-    
-    
+        </div2>
+
+        <div3>
+            <p2>Win count:</p2>
+            <wincount>0</wincount>
+            <br>
+            <p3>Loss count:</p3>
+            <losscount>0</losscount>
+            <br>
+        </div3>
+
+    </div>
+
+
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
